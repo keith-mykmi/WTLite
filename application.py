@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import sys
+sys.path.append('/home/site/wwwroot')
 
 from flask import Flask
 import pymongo
