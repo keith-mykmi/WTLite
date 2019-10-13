@@ -1,10 +1,8 @@
-#!/usr/bin/python3
-
 import sys
 sys.path.append('/home/site/wwwroot')
 
 from flask import Flask
-import pymongo
+from pymongo import MongoClient
 
 app = Flask(__name__)
 
@@ -12,7 +10,7 @@ app = Flask(__name__)
 def hello():
 
     uri = "mongodb://wtl:ThC65b3JBYd1CaCYqPaNImOFb6fWj4wOFeH1eanTWhaM4MqaYdq6kaCMQXf6dQU8YQTYRUaUjshiVp59eHoFsw==@wtl.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
-    myclient = pymongo.MongoClient(uri)
+    myclient = MongoClient(uri)
 
     mydb = myclient["mydatabase"]
     mycol = mydb["customers"]
