@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
 
-    uri = r"mongodb://wtl:ThC65b3JBYd1CaCYqPaNImOFb6fWj4wOFeH1eanTWhaM4MqaYdq6kaCMQXf6dQU8YQTYRUaUjshiVp59eHoFsw==@wtl.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
+    uri = "mongodb://wtl:ThC65b3JBYd1CaCYqPaNImOFb6fWj4wOFeH1eanTWhaM4MqaYdq6kaCMQXf6dQU8YQTYRUaUjshiVp59eHoFsw==@wtl.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
     myclient = pymongo.MongoClient(uri)
 
     mydb = myclient["mydatabase"]
